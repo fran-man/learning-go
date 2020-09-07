@@ -9,4 +9,18 @@ func main() {
   fmt.Println("\nIncrementing var:", x)
   fmt.Println("\ny:", y)
   //y = 2
+
+  printMultiVars()
+}
+
+func printMultiVars() {
+  const (
+    a = 1
+    a2 = 2
+    a3 = 3
+  )
+  fmt.Println("Printing multiple vars...")
+  fmt.Println(a)
+  fmt.Println(a2)
+  fmt.Println(a3)
 }
