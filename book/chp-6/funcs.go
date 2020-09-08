@@ -18,10 +18,10 @@ func sortRuneSlice(runes []rune) []rune {
   return runes
 }
 
-func stringToChars(stringToSplit string) []rune {
-  charArray := make([]rune, len(stringToSplit))
+func stringToChars(stringToSplit string) (charArray []rune) {
+  charArray = make([]rune, len(stringToSplit))
   for i, char := range stringToSplit {
     charArray[i] = char
   }
-  return charArray
+  return
 }
