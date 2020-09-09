@@ -12,9 +12,9 @@ func main() {
   if e != nil {
     fmt.Println("There was an error:",e)
   }
-
+  conn,e := listener.Accept()
+  defer conn.Close()
   for {
-    conn,e := listener.Accept()
     if e != nil {
       fmt.Println("There was an error:",e)
       continue
@@ -24,6 +24,5 @@ func main() {
     if e2 == nil {
       fmt.Printf("Received Message %s\n",inMsg)
     }
-    conn.Close()
   }
 }
