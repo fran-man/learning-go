@@ -30,10 +30,12 @@ func main() {
 }
 
 func (srv *Server) Alphabetize(input string, output *string) error {
+	fmt.Println("Received reqest to alphabetize:", input)
 	*output = string(
 		sortRuneSlice(
 			stringToChars(
 				input)))
+	fmt.Println("Done")
 	return nil
 }
 
